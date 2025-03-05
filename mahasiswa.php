@@ -9,7 +9,7 @@ switch ($aksi) {
             <thead>
                 <tr>
                     <th>No</th>
-                    <th class="text-start">NIM</th>
+                    <th class="text-start">N1M</th>
                     <th>Nama Mahasiswa</th>
                     <th>Email</th>
                     <th>Prodi</th>
