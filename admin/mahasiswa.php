@@ -4,7 +4,7 @@ include '../koneksi.php';
 switch ($aksi) {
     case 'list':
 ?>
-        <a href="index.php?p=mhs&aksi=input" class="btn btn-primary my-2"><i class="material-icons me-2">add_circle</i>Tambah Mahasiswa</a>
+        <a href="index.php?p=mhs&aksi=input" class="btn btn-success my-2" style="font-size: 25px;"><i class="material-icons me-2">add_circle</i>Tambah Mahasiswa</a>
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -25,6 +25,7 @@ switch ($aksi) {
                                         <th>Jekel</th>
                                         <th>Alamat</th>
                                         <th>Aksi</th>
+                                        <th>Testing</th>
                                     </tr>
                                 </thead>
                                 <tbody>
