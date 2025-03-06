@@ -199,7 +199,7 @@
             <div class="container">
                 <div class="copyright">
                     <i class="bi bi-c-circle"></i>
-                    <strong class="px-1 sitename">Teknologi Informasi</strong>
+                    <strong class="px-1 sitename">Jurusan Teknologi Informasi</strong>
                     <span>| Politeknik Negeri Padang</span>
                 </div>
                 <div class="credits">
