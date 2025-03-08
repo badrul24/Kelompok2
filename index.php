@@ -63,22 +63,22 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'home') ? 'active' : '' ?>">
-                        <a class="nav-link" href="index.php?p=home" class="active">Home</a>
+                    <li class="nav-item <?= (!isset($_GET['p'])) ? 'active' : '' ?>">
+                        <a class="nav-link" href="index.php?p=home">Home</a>
                     </li>
-                    <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'mhs') ? 'active' : '' ?>">
-                        <a class="nav-link" href="index.php?p=mhs" class="active">Mahasiswa</a>
+                    <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'mhs') ? 'active' : '' ?>">
+                        <a class="nav-link" href="index.php?p=mhs">Mahasiswa</a>
                     </li>
-                    <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'prodi') ? 'active' : '' ?>">
-                        <a class="nav-link" href="index.php?p=prodi" class="active">Program Studi</a>
+                    <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'prodi') ? 'active' : '' ?>">
+                        <a class="nav-link" href="index.php?p=prodi">Program Studi</a>
                     </li>
-                    <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'dosen') ? 'active' : '' ?>">
-                        <a class="nav-link" href="index.php?p=dosen" class="active">Dosen</a>
+                    <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'dosen') ? 'active' : '' ?>">
+                        <a class="nav-link" href="index.php?p=dosen">Dosen</a>
                     </li>
-                    <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'matkul') ? 'active' : '' ?>">
-                        <a class="nav-link" href="index.php?p=matkul" class="active">Matakuliah</a>
+                    <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'matkul') ? 'active' : '' ?>">
+                        <a class="nav-link" href="index.php?p=matkul">Matakuliah</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="logout.php">Login</a>
                     </li>
                 </ul>

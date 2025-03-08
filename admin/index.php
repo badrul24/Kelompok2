@@ -149,38 +149,38 @@ if (!isset($_SESSION['nama'])) {
               <p>Home</p>
             </a>
           </li>
-          <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'mhs') ? 'active' : '' ?>">
+          <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'mhs') ? 'active' : '' ?>">
             <a class="nav-link" href="index.php?p=mhs">
               <i class="material-icons">people</i>
               <p>Mahasiswa</p>
             </a>
           </li>
-          <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'prodi') ? 'active' : '' ?>">
+          <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'prodi') ? 'active' : '' ?>">
             <a class="nav-link" href="index.php?p=prodi">
               <i class="material-icons">school</i>
               <p>Program Studi</p>
             </a>
           </li>
-          <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'dosen') ? 'active' : '' ?>">
+          <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'dosen') ? 'active' : '' ?>">
             <a class="nav-link" href="index.php?p=dosen">
               <i class="material-icons">account_box</i>
               <p>Dosen</p>
             </a>
           </li>
-          <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'kategori') ? 'active' : '' ?>">
+          <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'kategori') ? 'active' : '' ?>">
             <a class="nav-link" href="index.php?p=kategori">
               <i class="material-icons">sell</i>
               <p>Kategori</p>
             </a>
           </li>
-          <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'berita') ? 'active' : '' ?>">
+          <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'berita') ? 'active' : '' ?>">
             <a class="nav-link" href="index.php?p=berita">
               <i class="material-icons">newspaper</i>
               <p>Berita</p>
             </a>
           </li>
           <?php if ($_SESSION['level'] == 'admin') { ?>
-            <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'user') ? 'active' : '' ?>">
+            <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'user') ? 'active' : '' ?>">
               <a class="nav-link" href="index.php?p=user">
                 <i class="material-icons">person</i>
                 <p>User</p>
@@ -188,18 +188,10 @@ if (!isset($_SESSION['nama'])) {
             </li>
           <?php } ?>
           <?php if ($_SESSION['level'] == 'admin') { ?>
-            <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'matkul') ? 'active' : '' ?>">
+            <li class="nav-item <?= (isset($_GET['p']) && $_GET['p'] == 'matkul') ? 'active' : '' ?>">
               <a class="nav-link" href="index.php?p=matkul">
                 <i class="material-icons">menu_book</i>
                 <p>Matakuliah</p>
-              </a>
-            </li>
-          <?php } ?>
-          <?php if ($_SESSION['level'] == 'admin') { ?>
-            <li class="nav-item <?= (!isset($_GET['p']) || $_GET['p'] == 'nilai') ? 'active' : '' ?>">
-              <a class="nav-link" href="index.php?p=nilai">
-                <i class="material-icons">menu_book</i>
-                <p>Nilai</p>
               </a>
             </li>
           <?php } ?>
@@ -239,9 +231,6 @@ if (!isset($_SESSION['nama'])) {
                   break;
                 case 'user':
                   echo 'User';
-                  break;
-                case 'nilai':
-                  echo 'Nilai';
                   break;
                 default:
                   echo 'Home';
@@ -308,7 +297,7 @@ if (!isset($_SESSION['nama'])) {
         if ($page == 'berita') include 'berita.php';
         if ($page == 'user') include 'user.php';
         if ($page == 'matkul') include 'matkul.php';
-        if ($page == 'nilai') include 'nilaimhs.php';
+        
         ?>
 
       </div>
