@@ -5,7 +5,7 @@
             $tgl=$_POST['thn'] . "-" . $_POST['bln'] . "-" . $_POST['tgl'];
             $hobies=implode(', ', $_POST['hobi']);
             
-            $sql=mysqli_query($db, "INSERT INTO mahasiswa(nim,nama,tgl_lahir,jekel,prodi_id,hobi,email,alamat) VALUES ('$_POST[nim]','$_POST[nama]','$tgl','$_POST[jk]','$_POST[prodi]','$hobies','$_POST[email]','$_POST[alamat]')");
+            $sql=mysqli_query($db, "INSERT INTO mahasiswa(nim,nama,tgl_lahir,jekel,prodi_id,hobi,email,alamat) VALUES ('$_POST[nim];','$_POST[nama]','$tgl','$_POST[jk]','$_POST[prodi]','$hobies','$_POST[email]','$_POST[alamat]')");
 
             if($sql) {
                 echo "<script>window.location='index.php?p=mhs'</script>";
